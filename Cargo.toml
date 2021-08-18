@@ -29,6 +29,7 @@ lto = "thin"
 opt-level = 3
 
 [dependencies]
+anyhow = "1"
 async-channel = "1"
 async-compat = "0.2"
 async-compression = { version = "0.3", features = [
@@ -74,6 +75,7 @@ serde_yaml = "0.8"
 simd-json = { version = "0.4", features = ["known-key"] }
 simd-json-derive = "0.2"
 snap = "1"
+surf = "=2.2.0"
 syslog_loose = "0.14"
 tremor-common = { path = "tremor-common" }
 tremor-influx = { path = "tremor-influx" }
@@ -106,7 +108,7 @@ lapin = "1.7.1"
 elastic = "0.21.0-pre.5"
 
 # ws
-async-tungstenite = { version = "0.13.1", features = ["async-std-runtime"] }
+async-tungstenite = { version = "0.14.0", features = ["async-std-runtime"] }
 tungstenite = { version = "0.13", default-features = false }
 
 # for tcp
@@ -138,6 +140,8 @@ grok = "1"
 # on features for these (see static-ssl feature here)
 openssl = { version = "0.10", features = ["vendored"] }
 
+#rest onramp
+tide = "0.16"
 
 # sse-onramp
 surf-sse = { git = "https://github.com/dak-x/surf-sse", tag = "2.0" }
@@ -171,7 +175,7 @@ googapis = { version = "0.5", default-features = false, features = [
 ] }
 gouth = { version = "0.2" }
 http = "0.2.4"
-reqwest = "0.11.3"
+reqwest = "0.11.4"
 
 [dev-dependencies]
 matches = "0.1"
